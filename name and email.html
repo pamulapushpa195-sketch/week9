@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Student Registration</h3>
+<form onsubmit="return validateForm()">
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Email:
+    <input type="text" id="email"><br><br>
+    <input type="submit" value="Register">
+</form>
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    if (name === "" || email === "") {
+        alert("Please fill in all fields");
+        return false;
+    }
+    alert("Form submitted successfully");
+    return true;
+}
+</script>
+</body>
+</html>
